@@ -13,8 +13,8 @@ namespace Leetcode_Exercises
 	/// <summary>
 	///
 	/// </summary>
-	public class Lc_0001_0010
-	{
+	public class Ex_0001_0010
+    {
 
 	}
 }
