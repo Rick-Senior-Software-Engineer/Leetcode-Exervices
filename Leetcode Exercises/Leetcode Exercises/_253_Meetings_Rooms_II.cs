@@ -26,7 +26,7 @@ namespace Leetcode_Exercises
     /// Constraints:
     /// 
     ///     1 <= intervals.length <= 104
-    ///     0 <= starti<endi <= 106
+    ///     0 <= starti < endi <= 106
     ///     
     /// Link: https://leetcode.com/problems/meeting-rooms-ii/
     /// </summary>
@@ -37,7 +37,14 @@ namespace Leetcode_Exercises
         /// </summary>
         public int MinMeetingRooms(int[][] intervals)
         {
-            Array.Sort(intervals, (a, b) => { return a[0].CompareTo(b[0]); });
+
+            // Thoughts...there's no need to sort the array, because we're just looking for what is available..
+            // so the solution is just to treat the array values as ranges and look for overlaps 
+            // In theory, I need to come up with three cases
+            // 1) The start time is before the current min time 
+            // 2) The time starts and ends within t
+
+            Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
 
             int rooms = 1;
             int freeRoomCount = 1;
